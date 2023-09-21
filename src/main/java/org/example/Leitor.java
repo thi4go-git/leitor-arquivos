@@ -9,27 +9,21 @@ import java.io.File;
 import java.util.List;
 
 public class Leitor {
-    private String path;
 
-    public Leitor(String path) {
-        this.path = path;
-    }
-
-    public List<String> lerArquivo() {
-        File file = new File(this.path);
+    public void lerArquivo(String path) {
+        File file = new File(path);
         ExtensaoEnum extensao = ExtensaoEnum.fromFileName(file.getName());
         switch (extensao) {
             case PDF:
                 Pdf pdf = new Pdf();
-                pdf.lerArquivo(this.path);
+                pdf.lerArquivo(path);
                 break;
             case TXT:
                 Txt txt = new Txt();
-                txt.lerArquivo(this.path);
+                txt.lerArquivo(path);
                 break;
             default:
                 throw new GeralException("Extensão de arquivo desconhecida!");
         }
-        return null;
     }
 }

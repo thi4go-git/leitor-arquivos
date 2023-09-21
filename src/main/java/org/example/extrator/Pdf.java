@@ -7,12 +7,13 @@ import org.example.exceptions.GeralException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pdf extends Arquivo {
 
 
-    public List<String> lerArquivo(String path) {
+    public void lerArquivo(String path) {
         File arquivoPdf = new File(path);
         validarArquivo(arquivoPdf);
         try (PDDocument document = PDDocument.load(arquivoPdf)) {
@@ -22,11 +23,9 @@ public class Pdf extends Arquivo {
                 PDFTextStripper tStripper = new PDFTextStripper();
                 String pdfFileInText = tStripper.getText(document);
                 String[] lines = pdfFileInText.split("\\r?\\n");
-                for (String line : lines) {
-                    this.linhas.add(line);
+                for (String linha : lines) {
+                    System.out.println(linha);
                 }
-                this.imprimirLinhas();
-                return this.linhas;
             } else {
                 throw new GeralException("Não foi possível ler o PDF: Documento com senha.");
             }

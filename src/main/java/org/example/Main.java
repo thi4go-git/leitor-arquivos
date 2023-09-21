@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,9 +7,8 @@ public class Main {
         String caminhoTXT = "./arquivos/ARQ.txt";
         String caminhoPDF = "./arquivos/Arquivo pdf.pdf";
 
-        Leitor leitor = new Leitor(caminhoTXT);
-
-        List<String> linhas = leitor.lerArquivo();
+        Leitor leitor = new Leitor();
+        leitor.lerArquivo(caminhoPDF);
 
     }
 }
