@@ -13,7 +13,7 @@ public class Leitor {
         File file = new File(path);
 
         if (!file.exists() || !file.isFile()) {
-            throw new RuntimeException("Arquivo inválido!");
+            throw new GeralException("Arquivo inválido!");
         }
 
         Arquivo arquivo = new Arquivo();
@@ -27,7 +27,7 @@ public class Leitor {
                 arquivo.lerArquivoTXT(this.path);
                 break;
             default:
-                throw new RuntimeException("Extensão de arquivo desconhecida!");
+                throw new GeralException("Extensão de arquivo desconhecida!");
         }
 
     }
