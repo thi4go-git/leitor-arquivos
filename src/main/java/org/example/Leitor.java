@@ -1,6 +1,12 @@
 package org.example;
 
+import org.example.enums.ExtensaoEnum;
+import org.example.exceptions.GeralException;
+import org.example.extrator.Pdf;
+import org.example.extrator.Txt;
+
 import java.io.File;
+import java.util.List;
 
 public class Leitor {
     private String path;
@@ -9,26 +15,21 @@ public class Leitor {
         this.path = path;
     }
 
-    public void lerArquivo() {
-        File file = new File(path);
-
-        if (!file.exists() || !file.isFile()) {
-            throw new GeralException("Arquivo inválido!");
-        }
-
-        Arquivo arquivo = new Arquivo();
-        String extensao = arquivo.retornarExtensao(file);
-
-        switch (extensao.toUpperCase()) {
-            case "PDF":
-                arquivo.lerArquivoPDF(this.path);
+    public List<String> lerArquivo() {
+        File file = new File(this.path);
+        ExtensaoEnum extensao = ExtensaoEnum.fromFileName(file.getName());
+        switch (extensao) {
+            case PDF:
+                Pdf pdf = new Pdf();
+                pdf.lerArquivo(this.path);
                 break;
-            case "TXT":
-                arquivo.lerArquivoTXT(this.path);
+            case TXT:
+                Txt txt = new Txt();
+                txt.lerArquivo(this.path);
                 break;
             default:
                 throw new GeralException("Extensão de arquivo desconhecida!");
         }
-
+        return null;
     }
 }

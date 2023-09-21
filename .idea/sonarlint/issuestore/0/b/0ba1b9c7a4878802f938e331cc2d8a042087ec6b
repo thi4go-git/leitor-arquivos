@@ -1,5 +1,9 @@
 
-W
-java:S1854":Remove this useless assignment to local variable "arqPdf".(¢éÙğ8èãõÉ«1
-H
-java:S1481"+Remove this unused "arqPdf" local variable.(¢éÙğ8ÅùõÉ«1
+\
+java:S1854":Remove this useless assignment to local variable "linhas".(¦€¦şøÿÿÿÿ8¢Ö²Î«1
+Z
+java:S1854">Remove this useless assignment to local variable "caminhoTXT".(Ñí=8—ØÎ«1
+K
+java:S1481"/Remove this unused "caminhoTXT" local variable.(Ñí=8˜ØÎ«1
+M
+java:S1481"+Remove this unused "linhas" local variable.(¦€¦şøÿÿÿÿ8¤Ö²Î«1
