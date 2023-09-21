@@ -3,10 +3,10 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        String arqTxt = "arquivos/ARQ.txt";
-        String arqPdf = "arquivos/Arquivo pdf.pdf";
+        String caminhoTXT = "arquivos/ARQ.txt";
+        String caminhoPDF = "arquivos/Arquivo pdf.pdf";
 
-        Leitor leitor = new Leitor(arqPdf);
+        Leitor leitor = new Leitor(caminhoTXT);
         leitor.lerArquivo();
 
     }
