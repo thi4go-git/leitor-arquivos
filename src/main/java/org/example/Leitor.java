@@ -26,15 +26,9 @@ public class Leitor {
             case "TXT":
                 arquivo.lerArquivoTXT(this.path);
                 break;
-            case "CSV":
-                arquivo.lerArquivoCSV(this.path);
-                break;
-            case "HTML":
-                arquivo.lerArquivoHTML(this.path);
-                break;
             default:
                 throw new RuntimeException("Extensão de arquivo desconhecida!");
         }
-        
+
     }
 }
