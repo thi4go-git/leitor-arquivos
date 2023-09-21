@@ -9,6 +9,7 @@ public class Main {
 
         Leitor leitor = new Leitor();
         leitor.lerArquivo(caminhoPDF);
+        leitor.lerArquivo(caminhoTXT);
 
     }
 }

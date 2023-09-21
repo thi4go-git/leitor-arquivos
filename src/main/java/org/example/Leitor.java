@@ -6,7 +6,7 @@ import org.example.extrator.Pdf;
 import org.example.extrator.Txt;
 
 import java.io.File;
-import java.util.List;
+
 
 public class Leitor {
 

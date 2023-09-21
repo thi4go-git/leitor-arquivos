@@ -7,10 +7,13 @@ import org.example.exceptions.GeralException;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.logging.Logger;
+
 
 public class Pdf extends Arquivo {
+
+    private static final Logger LOG = Logger.getLogger(Pdf.class.getName());
 
 
     public void lerArquivo(String path) {
@@ -18,6 +21,7 @@ public class Pdf extends Arquivo {
         validarArquivo(arquivoPdf);
         try (PDDocument document = PDDocument.load(arquivoPdf)) {
             if (!document.isEncrypted()) {
+                LOG.info("::: Lendo arquivo PDF :::");
                 PDFTextStripperByArea stripper = new PDFTextStripperByArea();
                 stripper.setSortByPosition(true);
                 PDFTextStripper tStripper = new PDFTextStripper();
