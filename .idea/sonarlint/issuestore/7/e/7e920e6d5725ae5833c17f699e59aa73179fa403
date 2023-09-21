@@ -1,0 +1,9 @@
+
+i
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¨°ΊΩ8‘ΆΚ«1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(φ„¶ϋÿÿÿÿ8ª”«Κ«1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥΄¨™ϋÿÿÿÿ8ΐ«Κ«1
+L	java:S106"+Replace this use of System.out by a logger.(½†Η―ύÿÿÿÿ8™ΆΚ«1
+L	java:S106"+Replace this use of System.out by a logger.(°Πθωÿÿÿÿ8ΆΚ«1
